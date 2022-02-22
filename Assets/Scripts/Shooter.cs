@@ -13,13 +13,13 @@ public class Shooter : MonoBehaviour
 			//引数一つでInstantiate
 			GameObject obj = Instantiate(prefab);
 			
-			//親要素設定（今回はGun)
+			//親要素設定（今回はCamera＆Gun)
 			obj.transform.parent = transform;
 			
 			//親要素からのオフセットは0
 			obj.transform.localPosition = Vector3.zero;
 			
-			//Gunからマウスクリックした地点にrayを飛ばす
+			//Gun＆Cameraからマウスクリックした地点にrayを飛ばす
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			
 			//rayの方向を長さ1にして dirに代入
