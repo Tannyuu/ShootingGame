@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class TCharacterController : MonoBehaviour
 {
     Vector3 pos;
     public float rotSpeed = 300.0f;

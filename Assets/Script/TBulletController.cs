@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class TBulletController : MonoBehaviour
 {
     void OnBecameInvisible()
     {
