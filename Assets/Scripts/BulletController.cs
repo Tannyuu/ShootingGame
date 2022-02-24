@@ -10,13 +10,13 @@ public class BulletController : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    /*
-     void Start () {
-        Destroy(gameObject, destroyTime);
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
     }
-    
-    void Update () {
-        transform.position += transform.forward * Time.deltaTime * speed;
-    }
-     */
 }
