@@ -14,12 +14,12 @@ public class EnemyController : MonoBehaviour
 			Destroy(gameObject, 0.1f);
 
 		}
-		if (coll.gameObject.tag == "Floor")
+		/*if (coll.gameObject.tag == "Floor")
 		{
 			gm.SetMsg("GameOver");
 
 		}
-
+		*/
 	}
 	public void SetGameMananger(GameManager gm)
 	{

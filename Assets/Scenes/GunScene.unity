@@ -479,12 +479,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ad7c5d4519255a48a589c4ecde3a4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 482551510263897479, guid: 222b62a8d9ff0234caaf677c5b8bc4bf, type: 3}
+  prefab: {fileID: 2297996587575980100, guid: 9cef0e03e85d64646ae57290bd25e2f3, type: 3}
 --- !u!1 &980692395
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +515,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980692395}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -648,7 +648,7 @@ GameObject:
   - component: {fileID: 1114656922}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -870,9 +870,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108013423}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ad7c5d4519255a48a589c4ecde3a4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 482551510263897479, guid: 222b62a8d9ff0234caaf677c5b8bc4bf, type: 3}
+  prefab: {fileID: 2297996587575980100, guid: 9cef0e03e85d64646ae57290bd25e2f3, type: 3}
