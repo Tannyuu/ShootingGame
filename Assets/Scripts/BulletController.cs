@@ -11,10 +11,11 @@ public class BulletController : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
+    private void OnCollisionEnter(Collision other)
+    { 
         if (other.gameObject.tag == "Enemy")
         {
+            
             Destroy(gameObject);
             Destroy(other.gameObject);
         }
