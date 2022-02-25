@@ -5,11 +5,18 @@ using UnityEngine;
 public class Shooter : MonoBehaviour
 {
 	public GameObject prefab;
+	Camera subCamera;
 
-	void Update()
+    private void Start()
+    {
+		subCamera = gameObject.GetComponent<Camera>();
+    }
+
+    void Update()
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
+			Debug.Log("test");
 			//引数一つでInstantiate
 			GameObject obj = Instantiate(prefab);
 			
@@ -20,7 +27,7 @@ public class Shooter : MonoBehaviour
 			obj.transform.localPosition = Vector3.zero;
 			
 			//Gun＆Cameraからマウスクリックした地点にrayを飛ばす
-			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			Ray ray = subCamera.ScreenPointToRay(Input.mousePosition);
 			
 			//rayの方向を長さ1にして dirに代入
 			Vector3 dir = ray.direction.normalized;

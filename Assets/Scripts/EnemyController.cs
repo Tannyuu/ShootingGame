@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
 	{
 		if (coll.gameObject.tag == "Bullet")
 		{
-			gm.SetScore(gm.GetScore() + 1);
+			//gm.SetScore(gm.GetScore() + 1);
 			Destroy(gameObject, 0.1f);
 
 		}

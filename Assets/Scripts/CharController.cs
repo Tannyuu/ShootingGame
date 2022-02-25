@@ -22,8 +22,8 @@ public class CharController : MonoBehaviour
 
 	void Update()
 	{
-		//前進成分を取得(0~1),今回はバックはしない
-		float acc = Mathf.Max(Input.GetAxis("Vertical"), 0f);
+		//前後進成分
+		float acc = Input.GetAxis("Vertical");
 		
 		//接地していたら
 		if (cc.isGrounded)

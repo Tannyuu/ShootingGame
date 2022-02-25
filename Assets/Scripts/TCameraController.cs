@@ -13,19 +13,19 @@ public class TCameraController : MonoBehaviour
 	{
 		
 		mainCamera = GameObject.Find("Main Camera");
-		subCamera = GameObject.Find("Sub Camera");
+		subCamera = GameObject.Find("SubCamera");
 
 		subCamera.SetActive(false);
 	}
 
 	void LateUpdate()
 	{
-		transform.position = player.position + (-player.forward * 3.0f) + (player.up * 1.0f);
-		transform.LookAt(player.position + Vector3.up);
+		mainCamera.transform.position = player.position + (-player.forward * 3.0f) + (player.up * 1.0f);
+		mainCamera.transform.LookAt(player.position + Vector3.up);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-			//mainCamera.SetActive(!mainCamera.activeSelf);
+			mainCamera.SetActive(!mainCamera.activeSelf);
 			subCamera.SetActive(!subCamera.activeSelf);
         }
 	}
