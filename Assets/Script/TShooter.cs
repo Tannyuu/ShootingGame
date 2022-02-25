@@ -9,14 +9,15 @@ public class TShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             GameObject obj = Instantiate(prefab);
-            obj.transform.parent = transform;
-            obj.transform.localPosition = Vector3.zero;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 dir = ray.direction.normalized;
-            obj.GetComponent<Rigidbody>().velocity = dir * 100.0f;
+            //obj.transform.parent = transform;
+            //obj.transform.localPosition = Vector3.zero;
+            obj.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, -180);
+            // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //Vector3 dir = ray.direction.normalized;
+            obj.GetComponent<Rigidbody>().velocity = obj.transform.position * 10.0f;
         }
     }
 }

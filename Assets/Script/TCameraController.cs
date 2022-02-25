@@ -9,6 +9,12 @@ public class TCameraController : MonoBehaviour
 	public GameObject mainCamera;
 	public GameObject subCamera;
 
+	public Transform YAxis;
+	public Transform XAxis;
+
+	public float XSpeed = 1.0f;
+	public float YSpeed = 1.0f;
+
 	void Start()
 	{
 		
@@ -18,7 +24,15 @@ public class TCameraController : MonoBehaviour
 		subCamera.SetActive(false);
 	}
 
-	void LateUpdate()
+    private void Update()
+    {
+		float xRotation = Input.GetAxis("Mouse X") * XSpeed;
+		float yRotation = Input.GetAxis("Mouse Y") * YSpeed;
+		YAxis.transform.Rotate(0, -xRotation, 0);
+		XAxis.transform.Rotate(yRotation, 0, 0);
+	}
+
+    void LateUpdate()
 	{
 		transform.position = player.position + (-player.forward * 3.0f) + (player.up * 1.0f);
 		transform.LookAt(player.position + Vector3.up);
