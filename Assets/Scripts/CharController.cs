@@ -32,8 +32,9 @@ public class CharController : MonoBehaviour
 			float rot = Input.GetAxis("Horizontal");
 			
 			//前進、回転が入力されていた場合大きい方の値をspeedにセットする(転回のみをするときも動くモーションをする)
-			//animator.SetFloat("speed", Mathf.Max(acc, Mathf.Abs(rot)));
-			
+			animator.SetFloat("speed", Mathf.Max(acc, Mathf.Abs(rot)));
+			animator.SetFloat("backSpeed", Mathf.Min(acc, Mathf.Abs(rot)));
+
 			//回転は直接トランスフォームをいじる
 			transform.Rotate(0, rot * rotSpeed * Time.deltaTime, 0);
 

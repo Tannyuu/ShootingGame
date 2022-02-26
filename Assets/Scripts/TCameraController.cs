@@ -25,7 +25,7 @@ public class TCameraController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-			mainCamera.SetActive(!mainCamera.activeSelf);
+			//mainCamera.SetActive(!mainCamera.activeSelf);
 			subCamera.SetActive(!subCamera.activeSelf);
         }
 	}
