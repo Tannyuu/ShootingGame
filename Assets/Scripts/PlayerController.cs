@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public int killCount;
     public int bossKillCount;
+    public int life;
 
     public int GetKillCount()
     {
@@ -29,6 +30,6 @@ public class PlayerController : MonoBehaviour
 
     public int Life()
     {
-        return Life();
+        return life;
     }
 }
