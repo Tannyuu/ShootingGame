@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:Assets/Scenes/SampleScene.unity.meta
 fileFormatVersion: 2
 guid: 89d45a5d945f99d40bf9e07d8052d3fc
+=======
+fileFormatVersion: 2
+guid: f7dfb536752c8f841bc854f931ccbad2
+>>>>>>> fukupr/fuku
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<< HEAD
 =======
 fileFormatVersion: 2
 guid: f7dfb536752c8f841bc854f931ccbad2
@@ -15,3 +21,5 @@ DefaultImporter:
   assetBundleName: 
   assetBundleVariant: 
 >>>>>>> fukupr/fuku:Assets/Scenes/GunScene.unity.meta
+=======
+>>>>>>> fukupr/fuku
