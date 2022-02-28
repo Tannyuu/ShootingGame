@@ -24,11 +24,6 @@ public class Stage2Controller : MonoBehaviour
 
         }
 
-        if (player.GetBossKillCount() == 1)
-        {
-            Invoke("MoveToClear", 2.0f);
-        }
-
     }
 
     void ReturnToStage2()
@@ -37,18 +32,6 @@ public class Stage2Controller : MonoBehaviour
         SceneManager.LoadScene("Stage2");
     }
 
-    void MoveToClear()
-    {
-        //stage2に切り替え
-        SceneManager.LoadScene("Clear");
-
-        //2秒後にReturnToTitleを呼び出す
-        Invoke("ReturnToTitle", 2.0f);
-    }
-
-    void ReturnToTitle()
-    {
-        SceneManager.LoadScene("TitleScene");
-    }
+    
 }
 

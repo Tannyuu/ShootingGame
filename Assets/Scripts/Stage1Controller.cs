@@ -12,7 +12,7 @@ public class Stage1Controller : MonoBehaviour
     {
         //ライフパネルを更新
         lifePanel.UpdateLife(player.Life());
-
+        
         //プレイヤーのライフが０になったらゲームオーバー
         if (player.Life() <= 0)
         {
@@ -24,10 +24,10 @@ public class Stage1Controller : MonoBehaviour
          
         }
 
-        //if (player.GetKillCount() == 20)
-        //{
-        //    Invoke("MoveToStage2", 2.0f);
-        //}
+        if (player.GetKillCount() == 20)
+        {
+            Invoke("MoveToStage2", 2.0f);
+        }
 
     }
 

@@ -23,7 +23,7 @@ public class TCameraController : MonoBehaviour
 		mainCamera.transform.position = player.position + (-player.forward * 3.0f) + (player.up * 1.0f);
 		mainCamera.transform.LookAt(player.position + Vector3.up);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(1))
         {
 			mainCamera.SetActive(!mainCamera.activeSelf);
 			subCamera.SetActive(!subCamera.activeSelf);

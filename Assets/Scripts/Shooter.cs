@@ -16,7 +16,6 @@ public class Shooter : MonoBehaviour
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
-			Debug.Log("test");
 			//引数一つでInstantiate
 			GameObject obj = Instantiate(prefab);
 			
