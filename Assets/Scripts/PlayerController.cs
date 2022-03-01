@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     public int killCount=0;
     public int killBossCount=0;
     public int life=3;
-    
-   
+
+
     public int GetKillCount()
     {
         return killCount;
