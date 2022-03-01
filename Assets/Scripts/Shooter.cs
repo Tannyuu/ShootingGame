@@ -6,11 +6,13 @@ public class Shooter : MonoBehaviour
 {
 	public GameObject prefab;
 	Camera subCamera;
+	AudioSource shotSound;
 
-    private void Start()
+	private void Start()
     {
 		subCamera = gameObject.GetComponent<Camera>();
-    }
+		shotSound = GetComponent<AudioSource>();
+	}
 
     void Update()
 	{
@@ -33,6 +35,8 @@ public class Shooter : MonoBehaviour
 			
 			//生成したObjのrigidbodyを取得し、速度をdir方向に与える
 			obj.GetComponent<Rigidbody>().velocity = dir * 100.0f;
+
+			shotSound.Play();
 		}
 
 	}
