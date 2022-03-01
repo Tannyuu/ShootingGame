@@ -1020,7 +1020,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 3125226928117352714}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3125226928117352715}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c4817320b412364aa83e4d064f3495f, type: 3}
@@ -1111,8 +1111,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Kyle
       objectReference: {fileID: 0}
+    - target: {fileID: 3125226928411218105, guid: 350a12c30f79d8d4d834715a733a5090,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 350a12c30f79d8d4d834715a733a5090, type: 3}
+--- !u!1 &3125226928117352715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3125226927099912407, guid: 350a12c30f79d8d4d834715a733a5090,
+    type: 3}
+  m_PrefabInstance: {fileID: 3125226928117352714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &3125226928117352717
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3125226928117352715}
+  m_Enabled: 0
 --- !u!1001 &6973144017600180086
 PrefabInstance:
   m_ObjectHideFlags: 0
