@@ -9,12 +9,16 @@ public class PlayerController : MonoBehaviour
     public int killBossCount=0;
     public int life=3;
 
+<<<<<<< HEAD
+
+=======
     public LifePanel lp;
 
     const float StunDuration = 0.5f;
     float recoverTime = 0.0f;
     
    
+>>>>>>> fukupr/fuku
     public int GetKillCount()
     {
         return killCount;

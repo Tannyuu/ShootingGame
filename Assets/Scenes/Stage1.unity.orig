@@ -1207,15 +1207,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot Kyle
       objectReference: {fileID: 0}
-    - target: {fileID: 3125226928411218107, guid: 350a12c30f79d8d4d834715a733a5090,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.3
-      objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 3125226928411218105, guid: 350a12c30f79d8d4d834715a733a5090,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+=======
+    - target: {fileID: 3125226928411218107, guid: 350a12c30f79d8d4d834715a733a5090,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3
+>>>>>>> fukupr/fuku
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 350a12c30f79d8d4d834715a733a5090, type: 3}

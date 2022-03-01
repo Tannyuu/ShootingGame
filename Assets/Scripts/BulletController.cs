@@ -21,7 +21,7 @@ public class BulletController : MonoBehaviour
     { 
         if (other.gameObject.tag == "Enemy")
         {
-            
+
             Destroy(gameObject);
             Destroy(other.gameObject);
             pc.killEnemy(1);
@@ -34,9 +34,9 @@ public class BulletController : MonoBehaviour
             pc.killBoss(1);
             if (pc.GetKillBossCount() == 20)
             {
-                pc.LoadClear();
+                pc.LoadClear();//Clear画面に遷移
             }
-        }
+        } 
     }
 
 }
