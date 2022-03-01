@@ -5,6 +5,12 @@ using UnityEngine;
 public class TShooter : MonoBehaviour
 {
     public GameObject prefab;
+    AudioSource shotSound;
+
+    void Start()
+    {
+        shotSound = GetComponent<AudioSource>();   
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,6 +23,7 @@ public class TShooter : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 dir = ray.direction.normalized;
             obj.GetComponent<Rigidbody>().velocity = dir * 100.0f;
+            shotSound.Play();
         }
     }
 }
