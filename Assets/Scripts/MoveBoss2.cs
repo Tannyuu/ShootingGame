@@ -35,9 +35,9 @@ public class MoveBoss2 : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
             //プレイヤーとの距離を計測
             float dist = Vector3.Distance(player.position, transform.position);
-            Debug.Log(dist);
+            //Debug.Log(dist);
             //索敵範囲に入ったか？
-            if (dist < traceDist && dist > 1.7f)
+            if (dist < traceDist && dist > 2.7f)
             {
                 //プレイヤーの位置を目的地に設定
                 nav.SetDestination(player.position);
@@ -48,14 +48,14 @@ public class MoveBoss2 : MonoBehaviour
                 animator.SetBool("IsAttack", false);
 
             }
-            else if (dist <= 1.7f)
+            else if (dist <= 2.7f)
             {
                 //探索範囲から出たら追跡終了
                 nav.isStopped = true;
-                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("attack1"))
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("attack"))
                 {
                     animator.SetBool("IsAttack", true);
-                    animator.SetTrigger("attack1");
+                    animator.SetTrigger("attack");
 
                 };
 

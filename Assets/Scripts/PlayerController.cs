@@ -8,6 +8,11 @@ public class PlayerController : MonoBehaviour
     public int killCount=0;
     public int killBossCount=0;
     public int life=3;
+
+    public LifePanel lp;
+
+    const float StunDuration = 0.5f;
+    float recoverTime = 0.0f;
     
    
     public int GetKillCount()
@@ -31,14 +36,27 @@ public class PlayerController : MonoBehaviour
         killBossCount += n;
     }
 
-    public void OnCollisionEnter(Collision other)
+    bool IsStun()
     {
-        if(other.gameObject.tag=="Enemy" || other.gameObject.tag=="Boss" )
+        return recoverTime > 0.0f || life <= 0;
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit other)
+    {
+        if (IsStun()) {
+            return;
+        }
+        //Debug.Log("ok");
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Mace")
         {
+            //Debug.Break();
+            Debug.Log("life" + life);
             life -= 1;
+            lp.UpdateLife(life);
+            recoverTime = StunDuration;
         }
     }
-    
+
     public int Life()
     {
         return life;
@@ -51,5 +69,14 @@ public class PlayerController : MonoBehaviour
     public void GoToClear()
     {
         SceneManager.LoadScene("Clear");
+    }
+
+    private void Update()
+    {
+        if (IsStun())
+        {
+            //動きを止め気絶状態からの復帰カウントを進める
+            recoverTime -= Time.deltaTime;
+        }
     }
 }
