@@ -36,7 +36,12 @@ public class BulletController : MonoBehaviour
             {
                 pc.LoadClear();//Clear画面に遷移
             }
-        } 
+        }
+
+        if (other.gameObject.tag == "Floor" || other.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
