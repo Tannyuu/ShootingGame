@@ -23,7 +23,7 @@ public class BulletController : MonoBehaviour
         {
 
             Destroy(gameObject);
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
             pc.killEnemy(1);
             //Debug.Log(pc.GetKillCount()); 
         }
