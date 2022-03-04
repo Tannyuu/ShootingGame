@@ -13,8 +13,15 @@ public class PlayerController : MonoBehaviour
 
     const float StunDuration = 0.5f;
     float recoverTime = 0.0f;
-    
-   
+
+    Animator animator;//
+
+    void Start()//
+    {
+        animator = GetComponent<Animator>();
+    }
+
+
     public int GetKillCount()
     {
         return killCount;
@@ -54,7 +61,13 @@ public class PlayerController : MonoBehaviour
             life -= 1;
             lp.UpdateLife(life);
             recoverTime = StunDuration;
+
+            //Debug.Log("damage");
+            animator.SetTrigger("Damage");
         }
+        
+        //Debug.Log("Idle");
+        animator.SetTrigger("Idle");//
     }
 
     public int Life()
